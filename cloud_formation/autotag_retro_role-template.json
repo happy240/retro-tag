@@ -22,7 +22,7 @@
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": { "Fn::Sub": "arn:aws:iam::${MainAwsAccountNumber}:role/gorillastack/autotag/execution/${MainStackName}Lambda" }
+                "AWS": { "Fn::Sub": "arn:aws-cn:iam::${MainAwsAccountNumber}:role/gorillastack/autotag/execution/${MainStackName}Lambda" }
               },
               "Action": [
                 "sts:AssumeRole"

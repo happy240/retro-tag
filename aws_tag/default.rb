@@ -23,9 +23,9 @@ module AwsTag
     def get_tags
 
       if aws_region_services_name.include? 'IAM'
-        regions = Aws.partition('aws').regions.select { |region| region.name == 'us-east-1' }
+        regions = Aws.partition('aws-cn').regions.select { |region| region.name == 'us-east-1' }
       else
-        regions = Aws.partition('aws').regions.
+        regions = Aws.partition('aws-cn').regions.
           select { |region| region.services.any? { |r| aws_region_services_name.include? r } }
       end
 

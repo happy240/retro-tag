@@ -46,14 +46,14 @@ module AwsResource
     def get_resources
 
       if aws_region_services_name.include? 'IAM'
-        regions = Aws.partition('aws').regions.select { |region| region.name == 'us-east-1' }
+        regions = Aws.partition('aws-cn').regions.select { |region| region.name == 'cn-north-1' }
       else
-        regions = Aws.partition('aws').regions.
+        regions = Aws.partition('aws-cn').regions.
           select { |region| region.services.any? { |region| aws_region_services_name.include? region } }
       end
 
       regions.each do |region|
-        next unless region.name == 'us-east-1' if friendly_service_name == 'S3 Buckets'
+        next unless region.name == 'cn-north-1' if friendly_service_name == 'S3 Buckets'
         safe_puts "Collecting resources from #{friendly_service_name} in #{region.name}" if $args['--details']
         @client = aws_client(region: region.name)
 

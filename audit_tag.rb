@@ -91,7 +91,7 @@ resources_by_service = [
   AwsResource::DataPipeline.new(**object_args),
   AwsResource::DynamoDbTable.new(**object_args),
   AwsResource::Ec2Ami.new(**object_args),
-  AwsResource::Ec2CustomerGateway.new(**object_args),
+  #AwsResource::Ec2CustomerGateway.new(**object_args),
   AwsResource::Ec2DhcpOptions.new(**object_args),
   AwsResource::EC2Instance.new(**object_args),
   AwsResource::Ec2Snapshot.new(**object_args),
@@ -115,7 +115,7 @@ resources_by_service = [
   AwsResource::VpcPeering.new(**object_args),
   AwsResource::VpcRouteTable.new(**object_args),
   AwsResource::VpcSubnet.new(**object_args),
-  AwsResource::VpnConnection.new(**object_args),
+  #AwsResource::VpnConnection.new(**object_args),
   AwsResource::VpnGateway.new(**object_args),
 ]
 
@@ -131,7 +131,7 @@ tags_by_service = [
   AwsTag::DataPipeline.new(**object_args),
   AwsTag::DynamoDbTable.new(**object_args),
   AwsTag::Ec2Ami.new(**object_args),
-  AwsTag::Ec2CustomerGateway.new(**object_args),
+  #AwsTag::Ec2CustomerGateway.new(**object_args),
   AwsTag::Ec2DhcpOptions.new(**object_args),
   AwsTag::EC2Instance.new(**object_args),
   AwsTag::Ec2Snapshot.new(**object_args),
@@ -155,7 +155,7 @@ tags_by_service = [
   AwsTag::VpcPeering.new(**object_args),
   AwsTag::VpcRouteTable.new(**object_args),
   AwsTag::VpcSubnet.new(**object_args),
-  AwsTag::VpnConnection.new(**object_args),
+  #AwsTag::VpnConnection.new(**object_args),
   AwsTag::VpnGateway.new(**object_args),
 ]
 
